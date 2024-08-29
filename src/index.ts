@@ -23,13 +23,6 @@ mongoose
 
 //ONLY START THE SERVER IF MONGOOSE IS CONNECTS
 const StartServer = async () => {
-    //MAIL SMTP CONNECTION
-    Logging.info('Connecting with SMTP Server...');
-
-
-    Logging.info('SMTP Server Connected');
-    Logging.info('SMTP Connection verified');
-
     router.use((req, res, next) => {
         Logging.info(
             `Incomming -> Method: [${req.method}] - Url: [${req.url}] - IP: [${req.socket.remoteAddress}]`
@@ -77,7 +70,7 @@ const StartServer = async () => {
         res.status(200).json({
             success: true,
             message:
-                'You are on node-typescript-boilderplate. You should not have further access from here.',
+                'You are on tymex-marketplace server.',
         });
     });
 
